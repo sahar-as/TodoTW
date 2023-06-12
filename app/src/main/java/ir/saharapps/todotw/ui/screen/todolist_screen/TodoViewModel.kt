@@ -1,5 +1,6 @@
 package ir.saharapps.todotw.ui.screen.todolist_screen
 
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -28,6 +29,7 @@ class TodoViewModel @Inject constructor(
     fun addNewTodo(todo: Todo){
         viewModelScope.launch(Dispatchers.IO) {
             useCases.addNewTodoUseCase(todo)
+            getAllTodo()
         }
     }
 }

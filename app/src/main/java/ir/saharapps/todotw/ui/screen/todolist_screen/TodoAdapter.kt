@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ir.saharapps.todotw.data.models.Todo
 import ir.saharapps.todotw.databinding.TodoItemBinding
 
-class TodoAdapter: ListAdapter<Todo, TodoAdapter.TodoViewHolder>(DiffCallBack()) {
+class TodoAdapter(private val onClick: (id: Int, isDone:Boolean) -> Unit): ListAdapter<Todo, TodoAdapter.TodoViewHolder>(DiffCallBack()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
         val binding = TodoItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,6 +26,10 @@ class TodoAdapter: ListAdapter<Todo, TodoAdapter.TodoViewHolder>(DiffCallBack())
             binding.apply {
                 txtTodoItem.text = todo.todoContent
                 chkTodoDoneStatus.isChecked = todo.isDone
+
+                root.setOnClickListener {
+                    onClick(todo.id, !todo.isDone)
+                }
             }
         }
     }

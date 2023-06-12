@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import ir.saharapps.todotw.data.repository.TodoRepository
+import ir.saharapps.todotw.data.repository.TodoRepositoryLocalImpl
 import ir.saharapps.todotw.domain.usecase.AddNewTodoUseCase
 import ir.saharapps.todotw.domain.usecase.GetTodoListUseCase
 import ir.saharapps.todotw.domain.usecase.UpdateTodoUseCase
@@ -17,7 +17,7 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideUseCase(todoRepository: TodoRepository): UseCases {
+    fun provideUseCase(todoRepository: TodoRepositoryLocalImpl): UseCases {
         return UseCases(
             getTodoListUseCase = GetTodoListUseCase(todoRepository),
             addNewTodoUseCase = AddNewTodoUseCase(todoRepository),

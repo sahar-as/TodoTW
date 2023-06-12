@@ -44,8 +44,8 @@ class TodoActivity : AppCompatActivity() {
         }
 
         lifecycleScope.launch {
-            todoViewModel.todoEvent.collect{
-                when(it){
+            todoViewModel.todoEvent.collect{viewState ->
+                when(viewState){
                     TodoViewModel.TodoEvent.ShowEmptyErrorMessage ->{
                         Toast.makeText(this@TodoActivity, "Write Todo!", Toast.LENGTH_LONG).show()
                     }

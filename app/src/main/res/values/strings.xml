@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TodoTW</string>
+    <string name="insert_new_todo">Insert New Todo</string>
 </resources>

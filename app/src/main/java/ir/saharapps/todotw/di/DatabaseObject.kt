@@ -20,7 +20,7 @@ object DatabaseObject {
     @Singleton
     @Provides
     fun provideTodoDatabase(@ApplicationContext context: Context) =
-        Room.databaseBuilder(context, TodoDatabase::class.java, DATABASE_NAME)
+        Room.databaseBuilder(context, TodoDatabase::class.java, DATABASE_NAME).build()
 
 
     @Singleton

@@ -3,7 +3,7 @@ package ir.saharapps.todotw.ui.screen.todolist_screen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import ir.saharapps.todotw.data.models.Todo
+import ir.saharapps.todotw.domain.models.Todo
 import ir.saharapps.todotw.domain.usecase.UseCases
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel

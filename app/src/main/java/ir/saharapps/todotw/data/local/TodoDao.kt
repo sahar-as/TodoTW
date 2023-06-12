@@ -5,7 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import ir.saharapps.todotw.data.models.Todo
+import ir.saharapps.todotw.domain.models.Todo
 
 @Dao
 interface TodoDao{
@@ -14,7 +14,7 @@ interface TodoDao{
     suspend fun getTodoList(): List<Todo>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertTodo(todo: Todo)
+    suspend fun addTodo(todo: Todo)
 
     @Update
     suspend fun update(todo: Todo)

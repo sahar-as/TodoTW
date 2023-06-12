@@ -1,4 +1,4 @@
-package ir.saharapps.todotw.data.models
+package ir.saharapps.todotw.domain.models
 
 import android.os.Parcelable
 import androidx.room.Entity

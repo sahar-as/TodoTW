@@ -25,7 +25,7 @@ class TodoAdapter(private val onClick: (id: Int, isDone:Boolean) -> Unit): ListA
         fun bind(todo: Todo){
             binding.apply {
                 txtTodoItem.text = todo.todoContent
-                chkTodoDoneStatus.isChecked = todo.isDone
+                chkDoneStatus.isChecked = todo.isDone
 
                 root.setOnClickListener {
                     onClick(todo.id, !todo.isDone)
@@ -41,4 +41,5 @@ class TodoAdapter(private val onClick: (id: Int, isDone:Boolean) -> Unit): ListA
         override fun areContentsTheSame(oldItem: Todo, newItem: Todo) =
             oldItem == newItem
     }
+
 }

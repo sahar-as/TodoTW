@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/txt_todoItem"
+        android:id="@+id/txt_todo_item"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -15,18 +15,18 @@
         android:layout_marginBottom="4dp"
         android:ellipsize="end"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/chk_todoDoneStatus"
+        app:layout_constraintEnd_toStartOf="@+id/chk_done_status"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Todo Item" />
 
     <CheckBox
-        android:id="@+id/chk_todoDoneStatus"
+        android:id="@+id/chk_done_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="@id/txt_todoItem"
+        app:layout_constraintBottom_toBottomOf="@id/txt_todo_item"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txt_todoItem" />
+        app:layout_constraintTop_toTopOf="@+id/txt_todo_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

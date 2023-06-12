@@ -7,17 +7,17 @@
     tools:context=".ui.screen.todolist_screen.TodoActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_todoList"
+        android:id="@+id/rv_todo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/edt_todoContent"
+        app:layout_constraintBottom_toTopOf="@+id/edt_todo_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edt_todoContent"
+        android:id="@+id/edt_todo_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -27,11 +27,11 @@
         android:hint="@string/insert_new_todo"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_addNewTodo"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_todo"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/btn_addNewTodo"
+        android:id="@+id/btn_add_todo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
